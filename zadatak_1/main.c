@@ -74,9 +74,6 @@ int WriteOut(Student* stud, int numOfStud) {
 	return 1;
 }
 
-
-
-
 int main(void) {
 	
 	Student* stud = NULL;
@@ -87,7 +84,6 @@ int main(void) {
 	if(numOfStud == -1)
 		return -1;
 
-
 	//allocate memory for students
 	stud = (Student*)malloc(numOfStud*sizeof(Student));
 
@@ -96,16 +92,13 @@ int main(void) {
 		return -1;
 	}
 
-
 	//read studetns from file
 	if (readStudents(FileName, stud) == -1)
 		return -1;
 	
-
 	//write out students
 	if (WriteOut(stud, numOfStud) !=1)
 		return -1;
-
 
 	free(stud);
 
